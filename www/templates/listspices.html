@@ -1,13 +1,10 @@
-
-<ion-view view-title="Spices typically used in {{cuisine.title}} cuisine">
+<ion-view view-title="All my spices">
   <ion-content>
     <ion-list ng-controller="CuisineDetailCtrl"
             show-delete="shouldShowDelete"
             show-reorder="shouldShowReorder"
             can-swipe="listCanSwipe">
-            <img ng-src="{{cuisine.img}}" height="150px" width="150px"/>
-            <p>{{cuisine.description}}</p>
-      <ion-item ng-repeat="spice in spices | filter:{cuisine: cuisine.title} | orderBy: 'title'"
+      <ion-item ng-repeat="spice in spices | orderBy: 'title'"
                 class="item-thumbnail-left" href="#/app/spice/{{spice.id}}">
 
         <img ng-src="{{spice.img}}">

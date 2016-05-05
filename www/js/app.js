@@ -50,6 +50,24 @@ angular.module('myspices', ['ionic', 'myspices.controllers', 'myspices.services'
         }
       }
     })
+  .state('app.addspice', {
+      url: '/addspice',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/addspice.html',
+          controller: 'AddSpiceCtrl'
+        }
+      }
+    })
+  .state('app.listspices', {
+      url: '/listspices',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/listspices.html',
+          controller: 'CuisinesCtrl'
+        }
+      }
+    })
     .state('app.cuisines', {
       url: '/cuisines',
       views: {
